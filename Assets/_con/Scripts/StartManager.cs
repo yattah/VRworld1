@@ -15,12 +15,12 @@ public class StartManager : MonoBehaviour {
 	private bool vrIsActive;
 
 	void Awake () {
-		#if UNITY_EDITOR_OSX
+		#if UNITY_EDITOR_WIN
 		mainCam = Instantiate(vrCam);
 		mainCam.transform.localPosition = SpawnPoint_VR;
 		#endif
 
-		#if UNITY_EDITOR_WIN
+		#if UNITY_EDITOR_OSX
 		mainCam = Instantiate(fpsCam);
 		mainCam.transform.localPosition = spawnPoint;
 		#endif
